@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  ul {
+    list-style: none;
+  }
 
   &__container {
     z-index: 3;
@@ -14,11 +17,15 @@
   }
 }
 // link-global
-a {
-  font-family: 'DM Sans';
-  font-weight: 500;
-  color: $textGrey;
-  text-decoration: none;
+.contacts {
+  &__email-tel {
+    a {
+      font-family: 'DM Sans';
+      font-weight: 500;
+      color: $textGrey;
+      text-decoration: none;
+    }
+  }
 }
 // lists-global
 .contacts {
@@ -62,22 +69,19 @@ a {
     flex-direction: column;
   }
 }
-ul {
-  list-style: none;
-}
-
 // header-global
 .contacts {
-  &__none-header {
-    visibility: hidden;
-    font-size: 1px;
-    margin: 0px;
-    padding: 0px;
+  h3 {
+    font-weight: 500;
+    font-family: 'DM Sans';
   }
-}
-h3 {
-  font-weight: 500;
-  font-family: 'DM Sans';
+  h4 {
+    font-weight: 500;
+    font-family: 'DM Sans';
+  }
+  &__none-header {
+    display: none;
+  }
 }
 .contacts {
   &__header-caffe {
@@ -100,7 +104,7 @@ h3 {
     justify-content: center;
     border-radius: 4px;
   }
-  &__header-article {
+  &__header-description {
     color: $black;
   }
   &__header-days {
@@ -108,7 +112,7 @@ h3 {
   }
 }
 // text-global
-article {
+div {
   p {
     font-weight: 500;
     color: $textGrey;
@@ -119,11 +123,6 @@ article {
   &__p-days {
     font-family: 'DM Sans';
     color: $textPink;
-  }
-  &__chicago {
-    font-family: 'DM Sans';
-    font-weight: 500;
-    color: #a5deff;
   }
 }
 // buttons-global
@@ -141,7 +140,7 @@ button {
     border-radius: 25px;
     width: 161.45px;
     height: 44px;
-    span {
+    .button-text {
       font-family: 'DM Sans';
       font-weight: 700;
       font-size: 16px;
@@ -156,7 +155,7 @@ button {
     width: 161.45px;
     height: 44px;
     border-radius: 25px;
-    span {
+    .button-text {
       font-family: 'DM Sans';
       font-weight: 700;
       font-size: 16px;
@@ -170,7 +169,7 @@ button {
     justify-content: center;
     gap: 13.17px;
     margin-bottom: 10px;
-    svg {
+    .button-icon {
       width: 10px;
       height: 10px;
       fill: $red;
@@ -181,7 +180,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 13.17px;
-    svg {
+    .button-icon {
       width: 10px;
       height: 10px;
       fill: $red;
@@ -191,22 +190,16 @@ button {
     background-color: $red;
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    span {
-      color: $white;
-    }
-    svg {
-      fill: $white;
-    }
   }
   &__button-franchise:focus {
     outline: none;
     background-color: $red;
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    span {
+    .button-text {
       color: $white;
     }
-    svg {
+    .button-icon {
       fill: $white;
     }
   }
@@ -214,22 +207,18 @@ button {
     background-color: $red;
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    span {
-      color: $white;
-    }
-    svg {
-      fill: $white;
-    }
+    color: $white;
+    fill: $white;
   }
   &__button-location:focus {
     outline: none;
     background-color: $red;
     transition: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    span {
+    .button-text {
       color: $white;
     }
-    svg {
+    .button-icon {
       fill: $white;
     }
   }
@@ -287,15 +276,17 @@ button {
 // text-mobile
 @media screen and (min-width: 320px) and (max-width: 767px) {
   // Depending on device there are different font sizes
-  a {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-  article {
-    p {
+  .contacts {
+    &__email-tel {
       font-size: 12px;
       line-height: 1.5;
-      margin: 0%;
+    }
+    &__description {
+      p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0%;
+      }
     }
   }
   .contacts {
@@ -304,7 +295,7 @@ button {
       line-height: 1.86;
       margin: 0;
     }
-    &__header-article {
+    &__header-description {
       font-size: 12px;
       line-height: 1.86;
       margin-bottom: 10px;
@@ -328,27 +319,29 @@ button {
 }
 //underline-mobile
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .article-item {
-    position: relative;
-  }
-  .article-item::after {
-    content: '';
-    position: absolute;
-    top: 110px;
-    background-color: #e1e1e1;
-    width: 179px;
-    height: 0.5px;
-  }
-  .days-item {
-    position: relative;
-  }
-  .days-item::after {
-    content: '';
-    position: absolute;
-    top: 140px;
-    background-color: #e1e1e1;
-    width: 179px;
-    height: 0.5px;
+  .contacts {
+    &__description-item {
+      position: relative;
+    }
+    &__description-item::after {
+      content: '';
+      position: absolute;
+      top: 110px;
+      background-color: #e1e1e1;
+      width: 179px;
+      height: 0.5px;
+    }
+    &__days-item {
+      position: relative;
+    }
+    &__days-item::after {
+      content: '';
+      position: absolute;
+      top: 140px;
+      background-color: #e1e1e1;
+      width: 179px;
+      height: 0.5px;
+    }
   }
 }
 //buttons-mobile
@@ -356,7 +349,6 @@ button {
   .contacts {
     &__buttons {
       flex-direction: column;
-      margin-bottom: 113px;
     }
   }
 }
@@ -381,7 +373,7 @@ button {
 
 /*--- tablet-set ---*/
 /*... grid-set ...*/
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
     &__list {
       display: grid;
@@ -402,7 +394,7 @@ button {
   }
 }
 // list-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
     // List setting + border settings + box-shadow
     &__list {
@@ -428,18 +420,20 @@ button {
   }
 }
 // text-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   // Depending on device there are different font sizes
-  a {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  article {
-    p {
+  .contacts {
+    &__email-tel {
       font-size: 14px;
-      line-height: 1.66;
-      margin: 0%;
-      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    &__description {
+      p {
+        font-size: 14px;
+        line-height: 1.66;
+        margin: 0%;
+        margin-bottom: 10px;
+      }
     }
   }
   .contacts {
@@ -448,7 +442,7 @@ button {
       line-height: 1.86;
       margin-top: 0;
     }
-    &__header-article {
+    &__header-description {
       font-size: 14px;
       line-height: 1.86;
       margin: 0;
@@ -473,7 +467,7 @@ button {
   }
 }
 // header-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
     &__header-caffe {
       width: 73px;
@@ -487,9 +481,8 @@ button {
     }
   }
 }
-
 //header-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
     &__header-caffe {
       color: $white;
@@ -514,7 +507,7 @@ button {
   }
 }
 //background-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
     position: relative;
     .container-background {
@@ -531,36 +524,37 @@ button {
   }
 }
 //underline-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .article-item {
-    position: relative;
-  }
-  .article-item::after {
-    content: '';
-    position: absolute;
-    top: 120px;
-    background-color: #e1e1e1;
-    width: 157px;
-    height: 0.5px;
-  }
-  .days-item {
-    position: relative;
-  }
-  .days-item::after {
-    content: '';
-    position: absolute;
-    top: 145px;
-    background-color: #e1e1e1;
-    width: 157px;
-    height: 0.5px;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .contacts {
+    &__description-item {
+      position: relative;
+    }
+    &__description-item::after {
+      content: '';
+      position: absolute;
+      top: 120px;
+      background-color: #e1e1e1;
+      width: 157px;
+      height: 0.5px;
+    }
+    &__days-item {
+      position: relative;
+    }
+    &__days-item::after {
+      content: '';
+      position: absolute;
+      top: 145px;
+      background-color: #e1e1e1;
+      width: 157px;
+      height: 0.5px;
+    }
   }
 }
 //buttons-tablet
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
     &__buttons {
       gap: 14.5px;
-      margin-bottom: 158px;
     }
   }
 }
@@ -568,7 +562,7 @@ button {
 
 /*--- PC-set ---*/
 /*... grid-set ...*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .contacts {
     &__list {
       display: grid;
@@ -589,7 +583,7 @@ button {
   }
 }
 // list-PC
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   // List setting + border settings + box-shadow
   .contacts {
     &__list {
@@ -616,27 +610,30 @@ button {
   }
 }
 // text-PC
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   // Depending on device there are different font sizes
-  a {
-    font-size: 16px;
-    line-height: 1.86;
-  }
-  article {
-    p {
+  .contacts {
+    &__email-tel {
       font-size: 16px;
       line-height: 1.86;
-      margin-top: 10px;
-      margin-bottom: 15px;
+    }
+    &__description {
+      p {
+        font-size: 16px;
+        line-height: 1.86;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
     }
   }
+
   .contacts {
     &__p-days {
       font-size: 16px;
       line-height: 1.86;
       margin: 0;
     }
-    &__header-article {
+    &__header-description {
       font-size: 16px;
       line-height: 1.86;
       margin-bottom: 0px;
@@ -657,7 +654,7 @@ button {
   }
 }
 // header-PC
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .contacts {
     &__header-caffe {
       width: 73px;
@@ -672,42 +669,42 @@ button {
   }
 }
 //underline-PC
-@media screen and (min-width: 1200px) {
-  .article-item {
-    position: relative;
-  }
-  .article-item::after {
-    content: '';
-    position: absolute;
-    top: 140px;
-    background-color: #e1e1e1;
-    width: 234px;
-    height: 0.5px;
-  }
-  .days-item {
-    position: relative;
-  }
-  .days-item::after {
-    content: '';
-    position: absolute;
-    top: 165px;
-    background-color: #e1e1e1;
-    width: 234px;
-    height: 0.5px;
+@media screen and (min-width: 1280px) {
+  .contacts {
+    &__description-item {
+      position: relative;
+    }
+    &__description-item::after {
+      content: '';
+      position: absolute;
+      top: 140px;
+      background-color: #e1e1e1;
+      width: 234px;
+      height: 0.5px;
+    }
+    &__days-item {
+      position: relative;
+    }
+    &__days-item::after {
+      content: '';
+      position: absolute;
+      top: 165px;
+      background-color: #e1e1e1;
+      width: 234px;
+      height: 0.5px;
+    }
   }
 }
 //buttons-PC
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .contacts {
     &__buttons {
       gap: 14.5px;
-
-      margin-bottom: 113px;
     }
   }
 }
 //background-PC
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .contacts {
     position: relative;
     .container-background {
