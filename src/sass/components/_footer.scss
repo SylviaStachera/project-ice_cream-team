@@ -38,6 +38,14 @@
   width: 152.47px;
 }
 
+.footer__svg {
+  fill: $iconPink;
+  transition: fill 250ms linear;
+}
+.footer__svg:hover {
+  fill: $red;
+}
+
 .footer__address {
   margin-top: 46px;
   padding-bottom: 43px;
