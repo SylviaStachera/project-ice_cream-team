@@ -102,18 +102,31 @@
         </li>
       </ul>
       <div class="contacts__buttons">
-        <button class="contacts__button-location" type="button">
+        <button class="contacts__button-location" type="button" contacts-modal-open>
           <span class="button-text">Our Locations </span>
           <svg class="button-icon" width="8px" height="8px">
             <use href="./images/icons-contacts.svg#icon-button"></use>
           </svg>
         </button>
-        <button class="contacts__button-franchise" type="button">
-          <span class="button-text">Franchise </span>
-          <svg class="button-icon" width="8px" height="8px">
-            <use href="./images/icons-contacts.svg#icon-button"></use>
-          </svg>
-        </button>
+        <a class="contacts__franchise" tabindex="-1" href="https://en.wikipedia.org/wiki/Franchise">
+          <button class="contacts__button-franchise" type="button">
+            <span class="button-text">Franchise </span>
+            <svg class="button-icon" width="8px" height="8px">
+              <use href="./images/icons-contacts.svg#icon-button"></use>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="backdrop is-hidden" contacts-modal>
+    <div class="contacts__modal">
+      <div class="contacts__map-box">
+        <iframe
+          id="map"
+          src="http://maps.google.com/maps?q=34.052235,-118.243683&z=16&output=embed"
+        ></iframe>
+        <button class="contacts__modal-close-btn" contacts-modal-close>X</button>
       </div>
     </div>
   </div>
