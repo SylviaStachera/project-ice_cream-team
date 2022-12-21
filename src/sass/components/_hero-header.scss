@@ -2,10 +2,16 @@
  ul {
 list-style-type: none;
 }
-
+.container_heder{
+  padding-top:32px;
+  display:flex;
+  max-width: 1600px;
+  align-items: center;
+   justify-content: space-between;
+}
 .wrapper {
     background-color: $primaryPink;
-    position: fixed;
+   
     top: 0;
     z-index: 10;
     width: 100vw;
@@ -40,7 +46,8 @@ list-style-type: none;
 
 .menu-toggle--inside {
   position: absolute;
-  right: 0;
+  right:30px;
+  top: 18px;
 }
 .mobile-menu {
   margin-bottom: 36px;
@@ -155,7 +162,7 @@ list-style-type: none;
   
   .hero {
     background-color: $primaryPink;
-    margin-top: 56px;
+    
   
     &__title {
       font-family: 'Titan One';
@@ -294,7 +301,7 @@ list-style-type: none;
     }
   
     .hero {
-      margin-top: 87px;
+     
   
       &__title {
         padding-bottom: 20px;
