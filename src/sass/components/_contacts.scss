@@ -386,6 +386,7 @@ button {
 }
 //map-mobile
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  //Locations-button
   .backdrop {
     position: absolute;
     z-index: 3;
@@ -408,6 +409,41 @@ button {
       border: 1px solid black;
     }
     &__modal-close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid black;
+      position: absolute;
+      bottom: 5px;
+      top: 1px;
+      right: 1px;
+    }
+  }
+  //Franchise-button
+  .backdrop-franchise {
+    position: absolute;
+    z-index: 3;
+    top: 60%;
+    bottom: 40%;
+  }
+  .is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .contacts__modal-franchise {
+    z-index: 3;
+  }
+  .contacts {
+    #map-franchise {
+      width: auto;
+      height: 450px;
+      z-index: 3;
+      border: 1px solid black;
+    }
+    &__modal-close-btn-franchise {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -618,6 +654,7 @@ button {
 }
 //map-tablet
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  //Locations-button
   .backdrop {
     position: absolute;
     z-index: 3;
@@ -641,6 +678,41 @@ button {
       border: 1px solid black;
     }
     &__modal-close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid black;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+    }
+  }
+  //Franchise-button
+  .backdrop-franchise {
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    bottom: 100%;
+  }
+  .is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .contacts__modal-franchise {
+    z-index: 3;
+  }
+  .contacts {
+    #map-franchise {
+      width: auto;
+      height: 600px;
+      width: 768px;
+      z-index: 3;
+      border: 1px solid black;
+    }
+    &__modal-close-btn-franchise {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -839,6 +911,7 @@ button {
 }
 //map-PC
 @media screen and (min-width: 1280px) {
+  //Locations-button
   .backdrop {
     position: absolute;
     z-index: 3;
@@ -862,6 +935,41 @@ button {
       border: 1px solid black;
     }
     &__modal-close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid black;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+    }
+  }
+  //Franchise-button
+  .backdrop-franchise {
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    bottom: 100%;
+  }
+  .is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .contacts__modal-franchise {
+    z-index: 3;
+  }
+  .contacts {
+    #map-franchise {
+      width: auto;
+      height: 600px;
+      width: 1280px;
+      z-index: 3;
+      border: 1px solid black;
+    }
+    &__modal-close-btn-franchise {
       display: flex;
       align-items: center;
       justify-content: center;

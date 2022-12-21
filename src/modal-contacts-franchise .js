@@ -1,9 +1,9 @@
 import './sass/main.scss';
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[contacts-location-modal-open]'),
-    closeModalBtn: document.querySelector('[contacts-location-modal-close]'),
-    modal: document.querySelector('[contacts-location-modal]'),
+    openModalBtn: document.querySelector('[contacts-franchise-modal-open]'),
+    closeModalBtn: document.querySelector('[contacts-franchise-modal-close]'),
+    modal: document.querySelector('[contacts-franchise-modal]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
