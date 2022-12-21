@@ -11,10 +11,9 @@ list-style-type: none;
 }
 .wrapper {
     background-color: $primaryPink;
-   
     top: 0;
     z-index: 10;
-    width: 100vw;
+    
   }
   
   .relative {
@@ -253,6 +252,11 @@ list-style-type: none;
       display: none;
     }
   }
+  @media screen and (min-width: 480px) {
+    .hero__ellipse {
+right: 0;
+    }
+  }
   
   // --- TABLET ---
   @media screen and (min-width: 768px) {
@@ -294,6 +298,8 @@ list-style-type: none;
   
     .relative {
       padding-bottom: 28px;
+    
+      
       padding-top: 56px;
       overflow: visible;
       display: flex;
@@ -443,7 +449,7 @@ list-style-type: none;
   
         &-dsc {
           font-size: 8px;
-          line-height: 1.25;
+          line-height: 0.8;
           text-align: right;
           color: $white;
         }
