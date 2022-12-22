@@ -11,3 +11,13 @@ li {
   margin: 0;
   padding: 0;
 }
+
+.slider {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: $red;
+}
