@@ -21,6 +21,7 @@
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   &__header {
@@ -28,14 +29,17 @@
     color: $red;
     font-size: 34px;
     line-height: 1.15;
+    letter-spacing: 0.04em;
     order: 2;
   }
 
   &__subtitle {
     margin: 0;
+    font-family: 'Titan One', cursive;
     color: $textPink;
     font-size: 18px;
     line-height: 1.17;
+    letter-spacing: 0.02em;
     order: 1;
   }
 
@@ -53,12 +57,14 @@
     margin: 0 auto 30px;
     max-width: 70%;
     color: $black;
+    letter-spacing: 0.02em;
   }
 
   &__description-text {
     margin: 0 auto 20px;
     max-width: 70%;
     color: $textGrey;
+    letter-spacing: 0.01em;
   }
 
   &__button {
@@ -83,7 +89,7 @@
   }
 
   &__button-icon {
-    stroke: $red;
+    fill: $red;
     margin-left: 14px;
     width: 8px;
     height: 10px;
@@ -142,6 +148,8 @@
       max-width: 340px;
       position: relative;
       left: 361px;
+      font-size: 14px;
+      letter-spacing: 0.01em;
     }
 
     &__description-text {
@@ -149,6 +157,8 @@
       max-width: 340px;
       position: relative;
       left: 361px;
+      font-size: 14px;
+      letter-spacing: 0.04em;
     }
 
     &__button {
@@ -198,6 +208,8 @@
       margin: 0 0 35px;
       max-width: 460px;
       left: 590px;
+      font-size: 16px;
+      letter-spacing: 0.01em;
     }
 
     &__description-text {
@@ -206,6 +218,8 @@
       line-height: 1.94;
       max-width: 460px;
       left: 590px;
+      font-size: 16px;
+      letter-spacing: 0.04em;
     }
 
     &__button {
