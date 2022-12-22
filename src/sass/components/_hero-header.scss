@@ -20,7 +20,7 @@ ul {
 
 .relative {
   position: relative;
-  padding-bottom: 160px;
+  padding-bottom: 250px;
   overflow: hidden;
   z-index: 1;
 }
@@ -35,20 +35,6 @@ ul {
   }
 }
 
-.menu-toggle {
-  color: $darkPink;
-  background-color: $darkPink;
-  border: none;
-  margin-top: 22px;
-  cursor: pointer;
-  width: 24px;
-}
-
-.menu-toggle--inside {
-  position: absolute;
-  right: 30px;
-  top: 18px;
-}
 .mobile-menu {
   margin-bottom: 36px;
 
@@ -312,6 +298,9 @@ ul {
 @media screen and (min-width: 480px) {
   .hero__ellipse {
     right: 0;
+    overflow: visible;
+  }
+  .relative {
     overflow: visible;
   }
 }
