@@ -234,7 +234,7 @@ list-style-type: none;
       border-radius: 50%;
       padding-top: 9px;
       padding-left: 81px;
-      top: 27px;
+      top: 69px;
       right: -62px;
       z-index: -1;
     }
@@ -260,6 +260,11 @@ right: 0;
   
   // --- TABLET ---
   @media screen and (min-width: 768px) {
+//     .menu-container {
+//   width:100%;
+//   max-width: 254px;
+// }
+  
     .header {
       padding-top: 37px;
   
@@ -383,7 +388,7 @@ right: 0;
         height: 322px;
         padding-top: 32px;
         padding-left: 71px;
-        top: 0;
+        top: 36px;
         right: 17.8%;
       }
   
@@ -455,6 +460,7 @@ right: 0;
         }
       }
     }
+    
   }
   
   // --- DESKTOP ---
@@ -564,7 +570,7 @@ right: 0;
         height: 538px;
         padding-top: 56px;
         padding-left: 119px;
-        top: 0;
+        top: 64px;
         right: 267px;
       }
   
